@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	id="com.simplec.plugins.launchaction"
+	version="1.0.0">
+
+	<name>LaunchActionPlugin</name>
+	
+	<description>
+		This plugin adds home intents to android manifest so that your app can act as a launcher.
+	</description>
+	
+	<license>Apache 2.0</license>
+		
+	<engines>
+		<engine name="cordova" version=">=3.0.0" />
+	</engines>
+	
+	<js-module src="www/LauncherActionPlugin.js" name="LauncherActionPlugin">
+		<clobbers target="window.plugins.launchAction" />
+	</js-module>
+	
+	  <!-- android -->
+	  <platform name="android">          
+	    <source-file src="src/android/com/simplec/phonegap/plugins/launchaction/LaunchActionPlugin.java" target-dir="src/com/simplec/phonegap/plugins/launchaction"/>
+	  </platform>
+</plugin>
