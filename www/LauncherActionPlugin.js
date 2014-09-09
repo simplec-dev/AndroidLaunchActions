@@ -22,4 +22,8 @@ LauncherActionPlugin.prototype.launchDateSettings = function(successCallback, fa
 	cordova.exec(successCallback, failureCallback, 'LauncherActionPlugin', 'launchDate', []);
 };
 
+LauncherActionPlugin.prototype.launchMemorySettings = function(successCallback, failureCallback) {
+	cordova.exec(successCallback, failureCallback, 'LauncherActionPlugin', 'launchMemory', []);
+};
+
 module.exports = new LauncherActionPlugin();

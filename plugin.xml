@@ -2,9 +2,9 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	id="com.simplec.plugins.launchaction"
-	version="1.0.0">
+	version="1.1.0">
 
-	<name>LaunchActionPlugin</name>
+	<name>Launch Action Plugin</name>
 	
 	<description>
 		This plugin adds home intents to android manifest so that your app can act as a launcher.

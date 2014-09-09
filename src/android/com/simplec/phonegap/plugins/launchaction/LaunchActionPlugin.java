@@ -16,6 +16,7 @@ public class LaunchActionPlugin extends CordovaPlugin {
 	private static final String ACTION_LAUNCH_DEVICE_INFO = "launchDeviceInfo";
 	private static final String ACTION_LAUNCH_DEVELOPMENT_SETTINGS = "launchDevelopment";
 	private static final String ACTION_LAUNCH_DATE_SETTINGS = "launchDate";
+	private static final String ACTION_LAUNCH_MEMORY_CARD_SETTINGS = "launchMemory";
 
 	public void initialize(CordovaInterface cordova, CordovaWebView webView) {
 		super.initialize(cordova, webView);
@@ -46,6 +47,11 @@ public class LaunchActionPlugin extends CordovaPlugin {
         
         if (ACTION_LAUNCH_DATE_SETTINGS.equals(action)) {
 	        Intent intent = new Intent(Settings.ACTION_DATE_SETTINGS);
+	        webView.getContext().startActivity(intent);
+        }
+        
+        if (ACTION_LAUNCH_MEMORY_CARD_SETTINGS.equals(action)) {
+	        Intent intent = new Intent(Settings.ACTION_MEMORY_CARD_SETTINGS);
 	        webView.getContext().startActivity(intent);
         }
 
