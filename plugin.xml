@@ -21,7 +21,13 @@
 	</js-module>
 	
 	  <!-- android -->
-	  <platform name="android">          
+	  <platform name="android">     
+	      <feature name="LauncherActionPlugin">
+	        <param name="android-package" value="com.simplec.phonegap.plugins.launchaction.LaunchActionPlugin" />
+            <param name="onload" value="true" />
+	      </feature>
+	    </config-file>
+	         
 	    <source-file src="src/android/com/simplec/phonegap/plugins/launchaction/LaunchActionPlugin.java" target-dir="src/com/simplec/phonegap/plugins/launchaction"/>
 	  </platform>
 </plugin>
