@@ -26,4 +26,12 @@ LauncherActionPlugin.prototype.launchMemorySettings = function(successCallback, 
 	cordova.exec(successCallback, failureCallback, 'LauncherActionPlugin', 'launchMemory', []);
 };
 
+LauncherActionPlugin.prototype.launchAction = function(action, successCallback, failureCallback) {
+	cordova.exec(successCallback, failureCallback, 'LauncherActionPlugin', 'launchActionIntent', [action]);
+};
+
+LauncherActionPlugin.prototype.launchActionDialog = function(action, successCallback, failureCallback) {
+	cordova.exec(successCallback, failureCallback, 'LauncherActionPlugin', 'launchActionDialogIntent', [action]);
+};
+
 module.exports = new LauncherActionPlugin();
